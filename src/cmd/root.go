@@ -28,6 +28,7 @@ import (
 
 var (
 	EmbedIndex embed.FS
+	EmbedLogin embed.FS
 	EmbedViews embed.FS
 )
 
@@ -141,6 +142,7 @@ func runRest(_ *cobra.Command, _ []string) {
 // Execute adds all child commands to the root command and sets flags appropriately.
 func Execute(embedIndex embed.FS, embedViews embed.FS) {
 	EmbedIndex = embedIndex
+	EmbedIndex = embedLogin
 	EmbedViews = embedViews
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)

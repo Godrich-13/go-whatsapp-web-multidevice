@@ -8,6 +8,8 @@ import (
 //go:embed views/index.html
 var embedIndex embed.FS
 
+var embedLogin embed.FS
+
 //go:embed views
 var embedViews embed.FS
 
